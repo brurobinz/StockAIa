@@ -1,0 +1,40 @@
+.chart-icon {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chart-icon.zoom-in {
+    background-color: #4caf50; /* Green */
+}
+
+.chart-icon.zoom-in:hover {
+    background-color: #388e3c;
+}
+
+.chart-icon.zoom-out {
+    background-color: #ff9800; /* Orange */
+}
+
+.chart-icon.zoom-out:hover {
+    background-color: #e65100;
+}
+
+.chart-icon.reset-zoom {
+    background-color: #007bff; /* Blue */
+}
+
+.chart-icon.reset-zoom:hover {
+    background-color: #0056b3;
+}

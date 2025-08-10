@@ -1,0 +1,56 @@
+.article-detail-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 80px auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000000;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-top: 50px;
+    outline: none;
+    transition: color 0.2s ease;
+}
+
+.back-button:hover {
+    color: #27c6ae;
+    background: none;
+    outline: none;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 50px 0 20px 60px;
+    text-align: center;
+}
+
+.article-image {
+    width: 20%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px auto;
+    display: block;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+article {
+    padding: 0 20px; /* Add padding on the left and right */
+    margin-top: 20px;
+}

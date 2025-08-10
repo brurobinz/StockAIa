@@ -1,0 +1,82 @@
+.updatePage {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.updatePage h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.updateForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.updateForm label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: #333;
+}
+
+.updateForm input,
+.updateForm select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submitButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.submitButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.submitButton:hover {
+    background-color: #0056b3;
+}
+
+.phoneNumberContainer {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.countryCodeInput {
+    width: 80px;
+    max-width: 80px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.phoneNumberInput {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.defaultOption {
+    font-weight: bold;
+}

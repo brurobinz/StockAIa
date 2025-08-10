@@ -1,0 +1,121 @@
+/* UserHelpPage.css */
+
+.user-help-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fefefe;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.user-help-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.user-help-form textarea {
+    resize: none;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.user-help-form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+.user-help-form button {
+    align-self: flex-end;
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    width: fit-content; 
+    min-width: 100px;   
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+
+.user-help-form button:hover {
+    background: #0056b3;
+}
+
+/* Message history */
+.message-history {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 12px;
+    max-height: 300px;
+    overflow-y: auto;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-30px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.message-history h3 {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.message-item {
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    position: relative;
+    animation: popIn 0.4s ease;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Message sender styles */
+.message-item.user {
+    background: #e6f0ff;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.message-item.admin {
+    background: #f8d7da;
+    align-self: flex-start;
+    text-align: left;
+}
+
+/* Sender label */
+.message-sender {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+}

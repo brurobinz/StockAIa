@@ -1,0 +1,350 @@
+/* src/components/StockTableAdmin.css */
+
+/* Import Google Fonts for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* CSS Variables for easier theming */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #1A73E8;
+    --positive-color: #27ae60;
+    --negative-color: #c0392b;
+    --background-color: #f0f4f8;
+    --header-background: linear-gradient(135deg, #2c3e50, #34495e);
+    --header-text-color: #ecf0f1;
+    --row-hover-color: rgba(44, 62, 80, 0.1);
+    --expanded-row-color: #dfe6e9;
+    --spinner-color: var(--primary-color);
+    --button-edit-bg: #2980b9;
+    --button-edit-hover-bg: #1f6391;
+    --button-delete-bg: #c0392b;
+    --button-delete-hover-bg: #96281b;
+    --font-family: 'Roboto', sans-serif;
+    --transition-speed: 0.3s;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Container Styling */
+.stock-table-container {
+    max-width: 1400px; /* Tăng kích thước tối đa cho admin */
+    margin: 40px auto;
+    padding: 30px;
+    font-family: var(--font-family);
+    background-color: var(--background-color); /* Màu nền nhẹ hơn cho admin */
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    transition: box-shadow var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.stock-table-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.stock-table-container h2 {
+    text-align: left; /* Đưa tiêu đề về bên trái */
+    color: var(--primary-color); /* Màu xanh đậm chuyên nghiệp hơn */
+    font-size: 32px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.stock-table-container h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 10px 0 0 0;
+    border-radius: 2px;
+}
+
+/* Table Styling */
+.stock-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px; /* Tạo khoảng cách giữa các hàng */
+    overflow-x: auto;
+}
+
+.stock-table th,
+.stock-table td {
+    padding: 20px 24px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.stock-table th {
+    background: var(--header-background); /* Gradient cho header */
+    color: var(--header-text-color); /* Màu chữ trắng nhạt */
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stock-table tbody tr {
+    transition: transform var(--transition-speed) ease, background-color var(--transition-speed) ease;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+}
+
+.stock-table tbody tr:hover {
+    background-color: var(--row-hover-color);
+    transform: translateY(-4px);
+}
+
+.stock-table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.stock-table td {
+    color: var(--primary-color);
+    font-size: 16px;
+    position: relative;
+}
+
+.stock-table td.change-positive {
+    color: var(--positive-color); /* Xanh lá */
+    font-weight: 500;
+}
+
+.stock-table td.change-negative {
+    color: var(--negative-color); /* Đỏ */
+    font-weight: 500;
+}
+
+.stock-table td.price {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Chevron Icon Styling */
+.chevron {
+    display: inline-block;
+    margin-left: 10px;
+    transition: transform var(--transition-speed) ease;
+    font-size: 16px;
+}
+
+.chevron.rotate {
+    transform: rotate(180deg);
+}
+
+/* Expanded Row Styles */
+.expanded-row {
+    background-color: var(--expanded-row-color);
+    transition: background-color var(--transition-speed) ease;
+}
+
+.expanded-content {
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    animation: fadeIn var(--transition-speed) ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.metrics-grid div {
+    font-size: 16px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.metrics-grid strong {
+    color: var(--primary-color);
+    min-width: 150px;
+}
+
+/* Chart Container Styles */
+.chart-container {
+    margin-top: 30px;
+    border-top: 2px solid #7f8c8d;
+    padding-top: 30px;
+}
+
+.chart-container h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.chart-container canvas {
+    width: 100% !important;
+    height: 400px !important;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* Loading and Updating Indicators */
+.loading-indicator,
+.updating-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.spinner {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid var(--spinner-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin-right: 20px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Action Buttons for Admin */
+.stock-table .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.stock-table .action-buttons button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color var(--transition-speed) ease, transform 0.2s ease;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+
+.stock-table .action-buttons .edit-button {
+    background-color: var(--button-edit-bg); /* Xanh biển */
+    display: flex;
+    align-items: center;
+}
+
+.stock-table .action-buttons .edit-button:hover {
+    background-color: var(--button-edit-hover-bg);
+    transform: scale(1.05);
+}
+
+.stock-table .action-buttons .delete-button {
+    background-color: var(--button-delete-bg); /* Đỏ */
+    display: flex;
+    align-items: center;
+}
+
+.stock-table .action-buttons .delete-button:hover {
+    background-color: var(--button-delete-hover-bg);
+    transform: scale(1.05);
+}
+
+/* Icon Styling within Buttons */
+.stock-table .action-buttons button svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .stock-table-container {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .stock-table-container {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 768px) {
+    .stock-table-container {
+        padding: 20px;
+    }
+
+    .stock-table th,
+    .stock-table td {
+        padding: 16px 18px;
+        font-size: 14px;
+    }
+
+    .stock-table-container h2 {
+        font-size: 28px;
+    }
+
+    .spinner {
+        width: 45px;
+        height: 45px;
+        border-width: 5px;
+    }
+
+    .loading-indicator,
+    .updating-indicator {
+        font-size: 18px;
+    }
+
+    .metrics-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .chevron {
+        font-size: 14px;
+    }
+
+    .chart-container canvas {
+        height: 300px !important;
+    }
+
+    /* Adjust action buttons size */
+    .stock-table .action-buttons button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .metrics-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+
+    .chart-container canvas {
+        height: 220px !important;
+    }
+
+    .stock-table-container h2 {
+        font-size: 24px;
+    }
+
+    /* Further adjust action buttons */
+    .stock-table .action-buttons button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}

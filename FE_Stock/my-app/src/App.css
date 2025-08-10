@@ -1,0 +1,236 @@
+/* src/App.css */
+
+/* User-provided global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  color: #0077cc;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --section-bg: #f9f9f9;
+}
+
+[data-theme='dark'] {
+    --bg-color: #181818;
+    --text-color: #f1f1f1;
+    --section-bg: #2c2c2c;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* Cho các section cài đặt */
+.settings-page {
+    background-color: var(--bg-color);
+}
+
+.setting-section {
+    background-color: var(--section-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.nav-links li a:hover {
+  color: #ddd;
+}
+
+/* Responsive iframe for AnalysisPage */
+.analysis-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.analysis-page-container h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+.dashboard-iframe {
+  width: 100%;
+  height: 80vh; /* Chiều cao iframe chiếm 80% viewport height */
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .dashboard-iframe {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-iframe {
+    height: 50vh;
+  }
+}
+
+/* Additional styles for other components if needed */
+
+
+
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+/*
+
+Css of analysis page 
+*/
+
+
+/* General styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Dashboard container */
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Controls container */
+.controls {
+  flex: 1 1 300px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.controls h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.controls select,
+.controls button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.controls select:focus,
+.controls button:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.controls button {
+  background: #4caf50;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.controls button:hover {
+  background: #45a049;
+}
+
+/* Chart container */
+.chart {
+  flex: 2 1 600px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chart h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+.chart-container {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for the chart */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 800px;
+}

@@ -1,0 +1,201 @@
+/* General Layout */
+.analysis-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #f7f9fc, #ffffff);
+}
+
+.analysis-content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 1024px) {
+    .analysis-content {
+        grid-template-columns: 1fr 3fr;
+    }
+}
+
+/* Controls Section */
+.controls-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.controls-card {
+    background: linear-gradient(to bottom right, #a8edea, #9795e5); /* Updated gradient */
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.controls-card:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+}
+
+.controls-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Light text shadow */
+}
+
+.controls-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers form elements horizontally */
+    justify-content: center; /* Centers form elements vertically */
+    width: 100%;
+    gap: 1.5rem; /* Adds consistent spacing between form elements */
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers each form group horizontally */
+    text-align: center; /* Centers labels and dropdowns text */
+    width: 100%;
+}
+
+.form-label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-select {
+    width: 90%; /* Adjust the width of the dropdown for consistent spacing */
+    max-width: 300px; /* Optional: Limit the maximum width for better aesthetics */
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: #42a5f5;
+    box-shadow: 0 0 8px rgba(66, 165, 245, 0.5);
+}
+
+.controls-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    width: 100%;
+}
+
+.predict-button {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #4caf50, #81c784); /* Green gradient */
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem; /* Adds some space above the button */
+}
+
+.predict-button:hover {
+    background: linear-gradient(to right, #388e3c, #66bb6a); /* Darker gradient */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Hover shadow */
+    transform: translateY(-2px); /* Button lift effect */
+}
+
+
+.error-message {
+    color: #d32f2f;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Chart Section */
+.chart-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.chart-card {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+.chart-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.chart-placeholder {
+    text-align: center;
+    color: #888;
+    font-size: 1rem;
+}
+
+/* Table Section */
+.table-card {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+.table-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.forecast-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+.forecast-table th,
+.forecast-table td {
+    border: 1px solid #ddd;
+    padding: 12px; /* Increased padding for better readability */
+    text-align: center;
+}
+
+.forecast-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.forecast-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.forecast-table tr:hover {
+    background-color: #f1f1f1; /* Row hover effect */
+    cursor: pointer; /* Pointer cursor for interaction feedback */
+}

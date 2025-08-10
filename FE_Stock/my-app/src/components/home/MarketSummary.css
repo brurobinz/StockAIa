@@ -1,0 +1,30 @@
+/* MarketSummary.css */
+
+.market-summary {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.market-summary h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.market-summary ul {
+    list-style-type: none;
+}
+
+.market-summary li {
+    margin: 5px 0;
+}
+
+.market-summary .red {
+    color: #e74c3c;
+}
+
+.market-summary .green {
+    color: #27ae60;
+}

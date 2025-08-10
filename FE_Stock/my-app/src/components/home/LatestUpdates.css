@@ -1,0 +1,24 @@
+/* LatestUpdates.css */
+
+.latest-updates {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.latest-updates h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.latest-updates ul {
+    list-style-type: none;
+    font-size: 14px;
+    color: #555;
+}
+
+.latest-updates li {
+    margin-bottom: 8px;
+}

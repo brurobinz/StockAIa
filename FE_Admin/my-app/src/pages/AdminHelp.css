@@ -1,0 +1,109 @@
+.admin-help-container {
+    display: flex;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    background: #f8f9fa;
+}
+
+.user-list {
+    width: 30%;
+    border-right: 2px solid #dee2e6;
+    padding: 20px;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+.user-list h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #343a40;
+}
+
+.user-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.user-list li {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.user-list li:hover,
+.user-list .selected {
+    background-color: #e9ecef;
+    font-weight: bold;
+}
+
+.message-viewer {
+    width: 70%;
+    padding: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.message-viewer h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #495057;
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    max-height: 500px;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 70%;
+}
+
+.message.user {
+    background-color: #d1e7dd;
+    align-self: flex-start;
+}
+
+.message.admin {
+    background-color: #cfe2ff;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.reply-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.reply-box textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    resize: none;
+    font-size: 14px;
+}
+
+.reply-box button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.reply-box button:hover {
+    background-color: #0b5ed7;
+}

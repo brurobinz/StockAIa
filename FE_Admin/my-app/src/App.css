@@ -1,0 +1,70 @@
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 100px; /* Adjust sidebar width */
+  background-color: #34495e; /* Sidebar color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  height: 100vh;
+  position: fixed;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  margin-left: 100px; /* Align with sidebar width */
+  padding: 20px; /* Padding inside content */
+  background-color: #f7f7f7;
+  flex-grow: 1;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.header {
+  width: calc(100% - 100px); /* Adjust width to account for sidebar */
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 100px; /* Align with sidebar */
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.sidebar svg, /* Nếu sử dụng react-icons */
+.sidebar img { /* Nếu sử dụng hình ảnh */
+  color: #ecf0f1;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.sidebar svg:hover,
+.sidebar img:hover {
+  transform: scale(1.1);
+  color: #3498db;
+}
+
+.logo {
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.avatar {
+  margin-top: auto;
+}
+
+/* Optional: Styles for other components */
+.dashboard-content {
+  /* Đã không cần vì đã bao gồm trong main-content */
+}

@@ -1,0 +1,140 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 40px;
+}
+
+.search-container {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 8px 40px 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.auth-links {
+    display: flex;
+    align-items: center;
+}
+
+.auth-links a {
+    margin-right: 10px;
+}
+
+.user-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profileMenu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 220px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    z-index: 1000;
+}
+
+.profileName {
+    text-align: left;
+    font-weight: bold;
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    padding-left: 10px;
+}
+
+.profileEmail {
+    text-align: left;
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    padding-left: 10px;
+}
+
+.manageAccount {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    color: #333;
+    background-color: #d3f8d3;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.profileMenuOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.profileMenuItem {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #0077cc;
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+.menuIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.signOut {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: #ff4d4d;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+.signOut:hover {
+    background-color: #ffe6e6;
+}

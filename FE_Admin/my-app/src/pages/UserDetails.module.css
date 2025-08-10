@@ -1,0 +1,128 @@
+.user-details-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-left: 50px;
+    min-height: calc(100vh - 80px);
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+}
+
+.user-details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px; /* Increased width for a wider container */
+    width: 100%; /* Makes the container responsive */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.left-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 50px; /* Space between content and avatar */
+}
+
+.user-info-section, .status-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.user-info-section h2, .status-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.user-info p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.user-info p strong {
+    color: #333;
+}
+
+.status {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+}
+
+.status.active {
+    background-color: #28a745;
+}
+
+.status.inactive {
+    background-color: #dc3545;
+}
+
+.avatar-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px; /* Adjusted for a slightly bigger avatar */
+    height: 200px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 100px; /* Adjusted for centering */
+}
+
+.avatar {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .user-details-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-section {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .avatar-section {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.status.active {
+    background-color: #28a745; /* Green for active */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.status.inactive {
+    background-color: #dc3545; /* Red for inactive */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.status-section p strong {
+    margin-right: 5px;
+}
